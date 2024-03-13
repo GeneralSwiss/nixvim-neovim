@@ -1,9 +1,16 @@
 {
   config = {
     clipboard.register = "unnamedplus";
+    clipboard.providers.xclip.enable = true;
     vimAlias = true;
     globals.mapleader = " ";
-    colorschemes.gruvbox.enable = true;
+    colorschemes = { 
+      base16 = {
+        enable = true;
+        colorscheme = "tomorrow-night-eighties";
+      	setUpBar = true;
+      };
+    };
     options = {
       scrolloff = 2; # scroll below content
       wrap = false; # do not wrap lines

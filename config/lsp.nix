@@ -8,12 +8,19 @@
       };
       lspBuf = {
         "gd" = "definition";
-	"gD" = "references";
-	"gt" = "type_definition";
-	"gi" = "implementation";
-	"K" = "hover";
+        "gD" = "references";
+        "gt" = "type_definition";
+        "gi" = "implementation";
+        "K" = "hover";
       };
     };
-    servers.rust-analyzer.enable = true;
+    servers = {
+      rust-analyzer.enable = true;
+      rust-analyzer.installCargo = false;
+      rust-analyzer.installRustc = false;
+      nixd.enable = true;
+      kotlin-language-server.enable = true;
+      tsserver.enable = true;
+    };
   };
 }
