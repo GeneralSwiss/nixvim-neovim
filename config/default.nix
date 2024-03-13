@@ -4,6 +4,7 @@
     ./bufferline.nix
     ./lightline.nix
     ./options.nix
+    ./auto-cmd.nix
     ./keymaps.nix
   ];
 }
