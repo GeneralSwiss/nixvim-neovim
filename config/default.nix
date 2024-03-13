@@ -6,5 +6,6 @@
     ./options.nix
     ./auto-cmd.nix
     ./keymaps.nix
+    ./plugins.nix
   ];
 }
