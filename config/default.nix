@@ -7,5 +7,6 @@
     ./auto-cmd.nix
     ./keymaps.nix
     ./plugins.nix
+    ./lsp.nix
   ];
 }
