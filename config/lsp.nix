@@ -12,6 +12,8 @@
         "gt" = "type_definition";
         "gi" = "implementation";
         "K" = "hover";
+        "<leader>r" = "format";
+        "<leader><leader>" = "code_action";
       };
     };
     servers = {
