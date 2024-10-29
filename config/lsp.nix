@@ -17,12 +17,12 @@
       };
     };
     servers = {
-      rust-analyzer.enable = true;
-      rust-analyzer.installCargo = false;
-      rust-analyzer.installRustc = false;
+      # rust-analyzer.enable = true;
+      # rust-analyzer.installCargo = false;
+      # rust-analyzer.installRustc = false;
       nixd.enable = true;
-      kotlin-language-server.enable = true;
-      tsserver.enable = true;
+      # kotlin-language-server.enable = true;
+      # tsserver.enable = true;
     };
   };
 }

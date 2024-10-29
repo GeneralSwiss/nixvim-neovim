@@ -7,7 +7,7 @@
     colorschemes = { 
       base16 = {
         enable = true;
-        colorscheme = "tomorrow-night-eighties";
+        colorscheme = "gruvbox-dark-medium";
       	setUpBar = true;
       };
     };
