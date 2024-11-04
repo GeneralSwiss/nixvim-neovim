@@ -11,7 +11,7 @@
       	setUpBar = true;
       };
     };
-    options = {
+    opts = {
       scrolloff = 2; # scroll below content
       wrap = false; # do not wrap lines
       splitright = true; # always split the same way

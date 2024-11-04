@@ -5,6 +5,7 @@
     ];
     
     plugins = {
+      web-devicons.enable = true;
       gitblame.enable = true;
       gitgutter.enable = true;
       fugitive.enable = true;
