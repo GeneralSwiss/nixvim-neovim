@@ -1,28 +1,41 @@
-{
+{lib, ...}: {
   plugins.lsp = {
     enable = true;
-    keymaps = {
-      diagnostic = {
-        "<leader>k" = "goto_prev";
-        "<leader>j" = "goto_next";
-      };
-      lspBuf = {
-        "gd" = "definition";
-        "gD" = "references";
-        "gt" = "type_definition";
-        "gi" = "implementation";
-        "K" = "hover";
-        "<leader>r" = "format";
-        "<leader><leader>" = "code_action";
-      };
-    };
+    keymaps = [
+    {
+    key = "gd";
+    lspBufAction = "definition";
+    }
+    {
+    key = "gD";
+    lspBufAction = "references";
+    }
+    {
+    key = "gt";
+    lspBufAction = "type_definition";
+    }
+    {
+    key = "gi";
+    lspBufAction = "implementation";
+    }
+    {
+    key = "K";
+    lspBufAction = "hover";
+    }
+    {
+    key = lib.nixvim.mkRaw "function() vim.diagnostic.jump({ count=-1, float=true }) end";
+    lspBufAction = "<leader>k";
+    }
+    {
+    key = lib.nixvim.mkRaw "function() vim.diagnostic.jump({ count=1, float=true }) end";
+    lspBufAction = "<leader>j";
+    }
+    ];
     servers = {
-      # rust-analyzer.enable = true;
-      # rust-analyzer.installCargo = false;
-      # rust-analyzer.installRustc = false;
-      nixd.enable = true;
-      # kotlin-language-server.enable = true;
-      # tsserver.enable = true;
+      rust_analyzer = {
+        enable = true;
+      };
     };
   };
+
 }
